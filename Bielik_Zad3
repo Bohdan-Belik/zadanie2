@@ -1,0 +1,31 @@
+package com.company;
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("Enter a value of a: ");
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        System.out.print("Enter a value of b: ");
+        int b = scan.nextInt();
+        System.out.print("Enter a value of c: ");
+        int c =scan.nextInt();
+        double d = b*b - 4*a*c;
+        double x1 = (-b + sqrt(d)) / 2 * a;
+        double x2 = (-b - sqrt(d)) / 2 * a;
+
+        if (d<0){
+            System.out.print("The equation has no roots.");
+        }
+        if(d==0){
+            System.out.print("We have only one root: " + x1);
+
+        }
+        if(d>0) {
+            System.out.println("The first root is: " + x1);
+            System.out.println("The second root is: " + x2);
+        }
+    }
+}
